@@ -16,7 +16,7 @@ Este projeto foi criado para fins de estudo, visando aprender mais sobre a plata
 - Exemplos básicos de scripts em GDScript
 - Implementação de uma cena simples com um nó principal e nós filhos
 - Interatividade física entre objetos no cenário
-- Interatividade com u usuário a partir dos clicks do mouse
+- Interatividade com o usuário a partir dos clicks do mouse
 
 ## O que Eu Aprendi
 
