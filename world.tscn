@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuo4f47l35sm5"]
+
+[ext_resource type="PackedScene" uid="uid://byqqdn0udnv1j" path="res://objects/box_regular.tscn" id="1_iseuq"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_x6x71"]
+[ext_resource type="PackedScene" uid="uid://bwti1vkr6t73w" path="res://objects/box_bouncy.tscn" id="2_wdcp5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4uxiu"]
+size = Vector2(1152, 64)
+
+[node name="World" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_x6x71")
+object_templates = Array[PackedScene]([ExtResource("1_iseuq"), ExtResource("2_wdcp5")])
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.0784314, 0.796078, 1, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(576, 616)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_4uxiu")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/CollisionShape2D"]
+offset_left = -576.0
+offset_top = -30.0
+offset_right = 576.0
+offset_bottom = 33.0
+
+[node name="Box Regular" parent="." instance=ExtResource("1_iseuq")]
+position = Vector2(315, 162)
+
+[node name="Box Regular2" parent="." instance=ExtResource("1_iseuq")]
+position = Vector2(695, 136)
+
+[node name="Box Regular3" parent="." instance=ExtResource("1_iseuq")]
+position = Vector2(1003, 164)
+
+[node name="Box Regular4" parent="." instance=ExtResource("1_iseuq")]
+position = Vector2(361, 328)
+
+[node name="Box Regular5" parent="." instance=ExtResource("1_iseuq")]
+position = Vector2(682, 315)
+
+[node name="Box Regular6" parent="." instance=ExtResource("2_wdcp5")]
+position = Vector2(501, 152)
+
+[node name="Box Regular7" parent="." instance=ExtResource("2_wdcp5")]
+position = Vector2(748, 459)
+
+[node name="Box Regular8" parent="." instance=ExtResource("2_wdcp5")]
+position = Vector2(162, 212)
+
+[node name="Box Regular9" parent="." instance=ExtResource("2_wdcp5")]
+position = Vector2(363, 41)
+
+[node name="Box Regular10" parent="." instance=ExtResource("2_wdcp5")]
+position = Vector2(972, 70)
